@@ -45,16 +45,23 @@ const HomePage = ({ vehicles, onExploreClick }: { vehicles: Vehicle[], onExplore
   const carA = vehicles.find(v => v.id === parseInt(selectedA));
   const carB = vehicles.find(v => v.id === parseInt(selectedB));
 
+  const customCursorStyle = {
+  // Added the comma after the ')'
+  cursor: "url('/cursor/Cursor-car_resized.cur'), auto",
+  };
+
   return (
-    <div>
-      <section className="relative h-[60vh] flex items-center justify-center bg-zinc-900">
+    <div className="min-h-screen cursor-[url('/cursor/Cursor-car_resized.cur'),_auto]">
+      <section className="relative h-[60vh] flex items-center justify-center bg-[url('/background-image/MCQUEEN.gif')] bg-cover bg-center h-64">
         <div className="text-center px-4">
+          
           <h1 className="text-5xl md:text-7xl font-black text-white tracking-tighter mb-4 uppercase italic">
             Speed <span className="text-red-600">&</span> Luxury
           </h1>
           <p className="text-zinc-400 text-lg max-w-xl mx-auto mb-8">
             Your exclusive gateway to the worlds most prestigious automotive collections.
           </p>
+          {/* Explore Inventory Button */}
           <button 
             onClick={onExploreClick}
             className="bg-red-600 text-white px-8 py-3 font-bold rounded-sm inline-flex items-center gap-2 hover:bg-red-700 transition-all active:scale-95"
@@ -64,7 +71,7 @@ const HomePage = ({ vehicles, onExploreClick }: { vehicles: Vehicle[], onExplore
         </div>
       </section>
 
-      <section className="py-16 bg-zinc-950">
+      <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-white uppercase text-center mb-10">Compare Performance</h2>
           <div className="grid md:grid-cols-2 gap-6 mb-10">
@@ -179,7 +186,7 @@ const ContactPage = () => {
     { id: 'antwaun', name: "Antwaun Clarke", role: "Styling & UI/UX Design", email: "antwaun.clarke@highendmotorsports.com", phone: "+1 (555) 101-0003" },
     { id: 'kyle', name: "Kyle Galang", role: "Front End Development", email: "kyle.galang@highendmotorsports.com", phone: "+1 (555) 101-0004" },
     { id: 'pietro', name: "Pietro Cavenaghi", role: "Front End Development", email: "pietro.cavenaghi@highendmotorsports.com", phone: "+1 (555) 101-0005" },
-    { id: 'paul', name: "Paul", role: "Styling & UI/UX Design", email: "paul@highendmotorsports.com", phone: "+1 (555) 101-0006" }
+    { id: 'paul', name: "Paul Solomon", role: "Styling & UI/UX Design", email: "paul@highendmotorsports.com", phone: "+1 (555) 101-0006" }
   ];
 
   return (
@@ -229,7 +236,7 @@ export default function App() {
 
   const[vehicles, setVehicles] = useState(MOCK_VEHICLES);
 
-
+  //API
   React.useEffect(() => {
     const getInventory = async () => {
       const key = process.env.NEXT_PUBLIC_VEHICLE_API_KEY;

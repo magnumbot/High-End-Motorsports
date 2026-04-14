@@ -13,11 +13,11 @@ const Navbar = ({ currentPage, setCurrentPage }: { currentPage: string, setCurre
   ];
 
   return (
-    <nav className="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
+    <nav className="bg-black border-b border-zinc-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setCurrentPage('home')}>
-            <span className="text-red-600"><Car size={24} /></span>
+            <span className="text-red-600"><img src="/logo/HEM-logo.png"  alt="Logo"className="w-23 h-auto" /></span>
             <span className="text-xl font-bold tracking-tighter text-white uppercase">High-End <span className="text-red-600">Motorsports</span></span>
           </div>
           

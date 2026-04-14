@@ -12,12 +12,12 @@ const CarIcon = () => (
 );
 export default function Footer() {
   return (
-    <footer className="bg-zinc-950 border-t border-zinc-800 pt-16 pb-8">
+    <footer className="bg-black border-t border-zinc-800 pt-16 pb-8">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center md:text-left">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
         <div>
           <div className="flex items-center justify-center md:justify-start gap-2 mb-6">
-            <span className="text-red-600"><CarIcon /></span>
+            <span className="text-red-600"><img src="/logo/HEM-logo.png"  alt="Logo"className="w-23 h-auto" /></span>
             <span className="text-lg font-bold tracking-tighter text-white uppercase">High-End <span className="text-red-600">Motorsports</span></span>
           </div>
           <p className="text-zinc-500 max-w-sm mb-6 leading-relaxed mx-auto md:mx-0">
@@ -32,6 +32,7 @@ export default function Footer() {
             <li>Antwaun Clarke</li>
             <li>Kyle Galang</li>
             <li>Pietro Cavenaghi</li>
+            <li>Paul Solomon</li>
           </ul>
         </div>
         <div>

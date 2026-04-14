@@ -24,3 +24,12 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Set the car as the default for the entire page */
+html, body {
+  cursor: url('/cursor/Cursor-car_resized.cur'), auto;
+}
+
+/* Force buttons and links to use the pointer car */
+a, button, .clickable {
+  cursor: url('/cursor/Cursor-pointer_resized.cur'), pointer; 
+}
