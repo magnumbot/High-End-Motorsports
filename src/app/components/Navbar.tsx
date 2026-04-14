@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { Car } from "lucide-react";
+
 
 const Navbar = ({ currentPage, setCurrentPage }: { currentPage: string, setCurrentPage: (page: string) => void }) => {
   const [isOpen, setIsOpen] = useState(false);

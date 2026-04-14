@@ -42,7 +42,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-zinc-900 pt-8 text-center text-zinc-600 text-xs">
-        © {new Date().getFullYear()} High-End Motorsports Project. CPAN144 Phase 1.
+        © {new Date().getFullYear()} High-End Motorsports
       </div>
     </div>
   </footer>
